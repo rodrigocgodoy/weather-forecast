@@ -1,13 +1,13 @@
-import react from 'react';
-import { View, Text } from 'react-native';
+import React from 'react';
+import { SafeAreaView, Text } from 'react-native';
 
 const Search = () => {
   return (
-    <View>
+    <SafeAreaView>
       <Text>
         Search
       </Text>
-    </View>
+    </SafeAreaView>
   )
 };
 
