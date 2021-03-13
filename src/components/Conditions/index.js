@@ -2,27 +2,27 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Feather, MaterialCommunityIcons } from '@expo/vector-icons';
 
-const Header = () => {
+const Header = ({ weather: { results: { wind_speedy, sunrise, sunset, humidity } } }) => {
   return (
     <View style={styles.container}>
       <View style={styles.condition}>
         <Feather name="wind" size={23} color="#1ed6ff" />
-        <Text>7 km/h</Text>
+        <Text>{wind_speedy}</Text>
       </View>
 
       <View style={styles.condition}>
         <MaterialCommunityIcons name="weather-sunset-up" size={23} color="#1ed6ff" />
-        <Text>5:22 am</Text>
+        <Text>{sunrise}</Text>
       </View>
 
       <View style={styles.condition}>
         <MaterialCommunityIcons name="weather-sunset-down" size={23} color="#1ed6ff" />
-        <Text>5:22 pm</Text>
+        <Text>{sunset}</Text>
       </View>
 
       <View style={styles.condition}>
         <Feather name="droplet" size={23} color="#1ed6ff" />
-        <Text>65</Text>
+        <Text>{humidity}</Text>
       </View>
     </View>
   );
